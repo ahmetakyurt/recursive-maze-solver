@@ -1,3 +1,4 @@
+
 def maze_solver(maze, location=(), currentPath=[], visited = set()):
         
     r, c = len(maze), len(maze[0])
@@ -44,7 +45,11 @@ def maze_solver(maze, location=(), currentPath=[], visited = set()):
 def main():
     with open("sample_maze.txt", "r") as file:
         maze = [list(line.strip()) for line in file]
-    
+    maze = [
+        list("#####"),
+        list("#S.E#"),
+        list("#####")
+    ]
     maze_solver(maze)
 
 if __name__ == "__main__":
